@@ -35,11 +35,13 @@
   position: relative;
   transition: background-color 1s ease;
 }
-.container .doraemon .face:hover {
-  background-color: #d6c2e8;
-  transition: background-color 5s ease;
+.container .doraemon .face:hover.mouth {
+  border-bottom: 0px;
+  width: calc(var(--size) * 6);
+  left: calc(50% - var(--size) * 6 / 2);
+  transition: all 3s ease;
 }
-.container .doraemon .face .white {
+.container .doraemon .white {
   --size: 400px;
   width: var(--size);
   height: calc(var(--size) - 62px);
@@ -50,7 +52,7 @@
   border-radius: 50%;
   border: 2px solid var(--black);
 }
-.container .doraemon .face .white .eye {
+.container .doraemon .white .eye {
   width: 130px;
   height: 150px;
   border-radius: 100%;
@@ -87,7 +89,7 @@
   left: 10px;
   top: calc(50% - 10px);
 }
-.container .doraemon .face .white .nose {
+.container .doraemon .white .nose {
   --size: 60px;
   width: var(--size);
   height: var(--size);
@@ -98,7 +100,7 @@
   left: calc(50% - var(--size) / 2);
   top: 50px;
 }
-.container .doraemon .face .white .nose::after {
+.container .doraemon .white .nose::after {
   --size: 20px;
   content: "";
   width: var(--size);
@@ -109,7 +111,7 @@
   top: 10px;
   left: 20%;
 }
-.container .doraemon .face .white .mouth {
+.container .doraemon .white .mouth {
   --size: 30px;
   width: var(--size);
   height: var(--size);
@@ -122,7 +124,7 @@
   transform-origin: top;
   transition: all 1s ease;
 }
-.container .doraemon .face .white .mouth::before {
+.container .doraemon .white .mouth::before {
   content: "";
   width: 2px;
   height: 106px;
@@ -131,7 +133,7 @@
   bottom: 100%;
   left: calc(50% - 1px);
 }
-.container .doraemon .face .white .mustache {
+.container .doraemon .white .mustache {
   position: absolute;
   height: 2px;
   width: 150px;
@@ -169,12 +171,6 @@
 }
 .container .doraemon .face .white .mustache.three {
   top: 170px;
-}
-.container .doraemon .face:hover .mouth {
-  border-bottom: 0px;
-  width: calc(var(--size) * 6);
-  left: calc(50% - var(--size) * 6 / 2);
-  transition: all 3s ease;
 }
 
 /*# sourceMappingURL=style.css.map */

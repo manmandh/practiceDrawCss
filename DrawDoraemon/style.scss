@@ -3,7 +3,6 @@
 	margin: 0;
 	box-sizing: border-box;
 }
-
 :root {
 	--bg: #ddb551;
 	--main-color: #51a1c4;
@@ -33,17 +32,88 @@
             position: relative;
             transition: background-color 1s ease;
             &:hover {
-                background-color: #d6c2e8;
-                transition: background-color 5s ease;
+                &.mouth {
+                    border-bottom: 0px;
+                    width: calc(var(--size) * 6);
+                    left: calc(50% - var(--size) * 6 / 2);
+                    transition: all 3s ease;
+                }
             }
-            .white {
-                --size: 400px;
+        }
+        .white {
+            --size: 400px;
+            width: var(--size);
+            height: calc(var(--size) - 62px);
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - var(--size) / 2);
+            background-color: var(--white);
+            border-radius: 50%;
+            border: 2px solid var(--black);
+            .eye {
+                width: 130px;
+                height: 150px;
+                border-radius: 100%;
+                background-color: var(--white);
+                border: 2px solid var(--black);
+                position: absolute;
+                top: -75px;
+            }
+            .eye.left {
+                left: calc(50% - 130px);
+            }
+              
+            .eye.right {
+                right: calc(50% - 130px);
+            }
+            .eye-black {
+                --size: 60px;
                 width: var(--size);
-                height: calc(var(--size) - 62px);
+                height: var(--size);
+                border-radius: 50%;
+                background-color: var(--black);
                 position: absolute;
                 bottom: 0;
                 left: calc(50% - var(--size) / 2);
-                background-color: var(--white);
+                transform-origin: top;
+                &::after {
+                    content: "";
+                    --size: 20px;
+                    width: var(--size);
+                    height: var(--size);
+                    border-radius: 50%;
+                    background-color: var(--white);
+                    position: absolute;
+                    left: 10px;
+                    top: calc(50% - 10px);
+                }
+            }
+            .nose {
+                --size: 60px;
+                width: var(--size);
+                height: var(--size);
+                background-color: var(--red);
+                border: 2px solid var(--black);
+                border-radius: 50%;
+                position: absolute;
+                left: calc(50% - var(--size) / 2);
+                top: 50px;
+                &::after {
+                    --size: 20px;
+                    content: "";
+                    width: var(--size);
+                    height: var(--size);
+                    border-radius: 50%;
+                    background-color: var(--white);
+                    position: absolute;
+                    top: 10px;
+                    left: 20%;
+                }
+            }
+            .mouth {
+                --size: 30px;
+                width: var(--size);
+                height: var(--size);
                 border-radius: 50%;
                 border: 2px solid var(--black);
                 .eye {
