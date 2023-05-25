@@ -18,7 +18,7 @@
   align-items: center;
   justify-content: center;
   background-color: var(--bg);
-  cursor: url("../image/mouse.png"), default;
+  cursor: url("image/mouse.png"), default;
 }
 .container .doraemon {
   --size: 500px;
@@ -61,13 +61,15 @@
   position: absolute;
   top: -75px;
 }
-.container .doraemon .white .eye.left {
+
+.container .doraemon .face .white .eye.left {
   left: calc(50% - 130px);
 }
-.container .doraemon .white .eye.right {
+.container .doraemon .face .white .eye.right {
   right: calc(50% - 130px);
 }
-.container .doraemon .white .eye-black {
+.container .doraemon .face .white .eye-black {
+
   --size: 60px;
   width: var(--size);
   height: var(--size);
@@ -78,7 +80,9 @@
   left: calc(50% - var(--size) / 2);
   transform-origin: top;
 }
-.container .doraemon .white .eye-black::after {
+
+.container .doraemon .face .white .eye-black::after {
+
   content: "";
   --size: 20px;
   width: var(--size);
@@ -140,36 +144,42 @@
   top: 120px;
   background-color: var(--black);
 }
-.container .doraemon .white .mustache.left {
+
+.container .doraemon .face .white .mustache.left {
+
   left: 0px;
   transform-origin: right;
   transform: rotate(20deg);
 }
-.container .doraemon .white .mustache.left.two {
+
+.container .doraemon .face .white .mustache.left.two {
   left: -10px;
   transform: rotate(0deg);
 }
-.container .doraemon .white .mustache.left.three {
+.container .doraemon .face .white .mustache.left.three {
   left: 0px;
   transform: rotate(-20deg);
 }
-.container .doraemon .white .mustache.right {
+.container .doraemon .face .white .mustache.right {
+
   right: 0px;
   transform-origin: left;
   transform: rotate(-20deg);
 }
-.container .doraemon .white .mustache.right.two {
+
+.container .doraemon .face .white .mustache.right.two {
   right: -10px;
   transform: rotate(0deg);
 }
-.container .doraemon .white .mustache.right.three {
+.container .doraemon .face .white .mustache.right.three {
   right: 0px;
   transform: rotate(20deg);
 }
-.container .doraemon .white .mustache.two {
+.container .doraemon .face .white .mustache.two {
   top: 145px;
 }
-.container .doraemon .white .mustache.three {
+.container .doraemon .face .white .mustache.three {
+
   top: 170px;
 }
 
