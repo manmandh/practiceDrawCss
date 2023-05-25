@@ -17,7 +17,9 @@
 	align-items: center;
 	justify-content: center;
 	background-color: var(--bg);
+
 	cursor: url("image/mouse.png"), default;
+
     .doraemon {
         --size: 500px;
         width: var(--size);
@@ -157,9 +159,8 @@
                     --size: 60px;
                     width: var(--size);
                     height: var(--size);
-                    background-color: var(--red);
-                    border: 2px solid var(--black);
                     border-radius: 50%;
+                    background-color: var(--white);
                     position: absolute;
                     left: calc(50% - var(--size) / 2);
                     top: 50px;
@@ -199,9 +200,26 @@
                 }
                 .mustache {
                     position: absolute;
-                    height: 2px;
-                    width: 150px;
-                    top: 120px;
+                    top: 10px;
+                    left: 20%;
+                }
+            }
+            .mouth {
+                --size: 30px;
+                width: var(--size);
+                height: var(--size);
+                border-radius: 50%;
+                border: 2px solid var(--black);
+                position: absolute;
+                bottom: 90px;
+                left: calc(50% - var(--size) / 2);
+                background-color: var(--red);
+                transform-origin: top;
+                transition: all 1s ease;
+                &::before {
+                    content: "";
+                    width: 2px;
+                    height: 106px;
                     background-color: var(--black);
                     &.left {
                         left: 0px;
@@ -236,6 +254,12 @@
                         top: 170px;
                     }
                 }
+                &.two {
+                    top: 145px;
+                }
+                &.three {
+                    top: 170px;
+                }
             }
             &:hover {
                 .mouth {
@@ -245,6 +269,7 @@
                     transition: all 3s ease;
                 }
             }
+
         }
     }
 }
